@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食网站 - 购物车</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /*页脚*/
+        .footer {
+            background-color: #343a40;
+            color: #edc1c1;
+            padding: 30px 0;
+            margin-top: 30px;
+        }
+        /*购物车图片*/
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .cart-item {
+            border-bottom: 1px solid #edc1c1;
+            padding: 15px 0;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        .quantity-control {
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+<!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">美食网站</a>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="index.html">首页</a>
+            <a class="nav-link active" href="2.html">购物车</a>
+            <a class="nav-link" href="3.html">登录</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <h1 class="mb-4">购物车</h1>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <!-- 购物车商品列表 -->
+                    <div class="cart-item">
+                        <div class="d-flex align-items-center">
+                            <img src="./images/pizza.jpeg"
+                                 class="cart-item-image me-3" alt="披萨">
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1">意大利披萨</h5>
+                                <p class="text-muted mb-1">正宗意大利风味</p>
+                                <p class="fw-bold text-primary mb-0">¥68</p>
+                            </div>
+                            <div class="me-3">
+                                <input type="number" class="form-control quantity-control" value="1" min="1">
+                            </div>
+<!--                            删除按钮-->
+                            <button class="btn btn-outline-danger">删除</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="d-flex align-items-center">
+                            <img src="./images/mian.jpeg"
+                                 class="cart-item-image me-3" alt="意大利面">
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1">意大利面</h5>
+                                <p class="text-muted mb-1">新鲜食材，精湛工艺</p>
+                                <p class="fw-bold text-primary mb-0">¥98</p>
+                            </div>
+                            <div class="me-3">
+                                <input type="number" class="form-control quantity-control" value="1" min="1">
+                            </div>
+                            <button class="btn btn-outline-danger">删除</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">订单摘要</h5>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>商品总额</span>
+                        <span>¥166</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>配送费</span>
+                        <span>¥10</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="fw-bold">总计</span>
+                        <span class="fw-bold">¥176</span>
+                    </div>
+                    <button class="btn btn-primary w-100">去结算</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<footer class="footer">
+    <div class="container text-center">
+        <p>&copy; 2025 美食网站</p>
+    </div>
+</footer>
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
