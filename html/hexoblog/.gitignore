@@ -3,3 +3,5 @@ public/
 .deploy_git/
 .idea/
 .DS_Store
+PDF/
+code/
